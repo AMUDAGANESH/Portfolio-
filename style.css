@@ -837,3 +837,58 @@ footer {
 .btn-icon i {
     font-size: 18px;
 }
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    background-color: #f7f9fc;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    flex-direction: column;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center;
+    gap: 30px; /* Adds space between the contact items */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    text-align: center; /* Centers the text inside each contact item */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+}
+
+.contact-item i {
+    font-size: 40px; /* Icon size */
+    color: #1f8eed;
+    margin-bottom: 10px;
+}
+
+.contact-item h4 {
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+}
+
+.contact-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+}
+
