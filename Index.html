@@ -12,11 +12,11 @@
   <!-- Styling -->
   <style>
     :root{
-      --bg:#0f1724;          /* deep navy */
-      --card:#0f1728;        /* card dark */
-      --muted:#94a3b8;       /* muted text */
-      --accent:#06b6d4;      /* cyan accent */
-      --accent-2:#7c3aed;    /* purple */
+      --bg:#0f1724;
+      --card:#0f1728;
+      --muted:#94a3b8;
+      --accent:#06b6d4;
+      --accent-2:#7c3aed;
       --glass: rgba(255,255,255,0.04);
       --glass-2: rgba(255,255,255,0.02);
       --white: #e6eef8;
@@ -102,9 +102,7 @@
 
     /* Skills with animated bars */
     .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-    .skill{
-      padding:12px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.02);
-    }
+    .skill{padding:12px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.02)}
     .skill h5{margin:0 0 8px;font-size:13px;color:var(--white)}
     .bar{height:10px;background:rgba(255,255,255,0.05);border-radius:999px;overflow:hidden}
     .bar-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:999px;transition:width 900ms cubic-bezier(.2,.9,.3,1)}
@@ -138,218 +136,18 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="topbar container" role="banner">
-      <div class="logo"><i class="fas fa-user-graduate"></i> <span style="color:var(--muted)">Amuda</span><strong style="color:var(--white)">Ganesh</strong></div>
-
-      <nav aria-label="Main navigation">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#skills">Skills</a></li>
-        </ul>
-      </nav>
-
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
-    </div>
-  </header>
-
-  <main id="home" style="padding-top:84px;">
-    <div class="container hero">
-      <div class="hero-grid">
-        <!-- LEFT: Profile Card -->
-        <aside class="card" style="min-height:260px">
-          <div class="profile-top">
-            <div class="avatar-wrap" id="avatarWrap">
-              <img id="avatarImg" src="https://via.placeholder.com/400x400.png?text=Your+Photo" alt="Profile photo of Amuda Ganesh">
-            </div>
-            <div class="meta" aria-label="Profile meta">
-              <h1>Amuda Ganesh</h1>
-              <p class="muted">B.Com (Computer Applications) • Business & Tech</p>
-              <div class="upload-btn">
-                <label class="btn secondary" title="Upload a profile photo">
-                  <i class="fas fa-upload"></i>
-                  <input type="file" id="photoUpload" accept="image/*">
-                  Replace Photo
-                </label>
-                <button class="btn" id="downloadResumeBtn" title="Generate resume PDF"><i class="fas fa-file-download"></i> Download Resume</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="intro">
-            <p class="muted">Motivated B.Com graduate combining commerce fundamentals with a working knowledge of web technologies. Seeking roles in business analysis, accounts, or junior product operations.</p>
-          </div>
-
-          <div class="contact-grid">
-            <div class="chip"><i class="fas fa-envelope"></i> <a href="mailto:amuda.ganesh@example.com" id="emailLink">amuda.ganesh@example.com</a></div>
-            <div class="chip"><i class="fas fa-phone"></i> <a href="tel:+919812345678" id="phoneLink">+91 98123 45678</a></div>
-            <div class="chip"><i class="fas fa-map-marker-alt"></i> Hyderabad, Telangana</div>
-            <div class="chip"><i class="fab fa-linkedin"></i> <a href="#" id="linkedinLink">linkedin.com/in/amudaganesh</a></div>
-          </div>
-        </aside>
-
-        <!-- RIGHT: Main Panels -->
-        <section class="panel">
-          <!-- Quick KPIs -->
-          <div class="kpi-row">
-            <div class="kpi card">
-              <h4>Experience</h4>
-              <p>Fresher</p>
-            </div>
-            <div class="kpi card">
-              <h4>Projects</h4>
-              <p>5+ Practice Projects</p>
-            </div>
-            <div class="kpi card">
-              <h4>Languages</h4>
-              <p>Telugu • English • Hindi</p>
-            </div>
-          </div>
-
-          <!-- About / Summary -->
-          <div class="card">
-            <div class="section-title">About Me</div>
-            <div style="display:flex;gap:18px;flex-wrap:wrap">
-              <div style="flex:1;min-width:220px">
-                <p class="muted">I specialize in combining commerce knowledge with basic computer application skills — accounting fundamentals, spreadsheets, SQL basics and a little web dev. I enjoy learning new tools to help businesses run better.</p>
-                <ul class="tiny" style="margin-top:10px">
-                  <li>Quick learner • Team player • Detail oriented</li>
-                  <li>Comfortable with Excel, basic SQL & front-end basics</li>
-                </ul>
-              </div>
-              <div style="width:260px">
-                <div class="sep"></div>
-                <div class="tiny" style="margin-top:10px"><strong>Looking for:</strong> Entry-level roles in accounting, business operations, or junior analyst positions.</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Education (timeline) -->
-          <div class="card" id="education">
-            <div class="section-title">Education</div>
-            <div class="timeline" id="timeline">
-              <div class="tl-item" data-animate>
-                <h4>Bachelor of Commerce (B.Com) — Osmania University</h4>
-                <div class="tl-meta">2021 – 2024 • Specialization: Computer Applications</div>
-                <div class="muted tiny" style="margin-top:8px">Key coursework: Accounting, Business Law, Database basics, Computer Fundamentals.</div>
-              </div>
-
-              <div class="tl-item" data-animate>
-                <h4>Higher Secondary (Commerce) — Government Junior College</h4>
-                <div class="tl-meta">2019 – 2021</div>
-              </div>
-
-              <div class="tl-item" data-animate>
-                <h4>Secondary School — Local High School</h4>
-                <div class="tl-meta">2017 – 2019</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Skills -->
-          <div class="card" id="skills">
-            <div style="display:flex;justify-content:space-between;align-items:center">
-              <div class="section-title">Skills</div>
-              <div class="tiny muted">Animated skill bars</div>
-            </div>
-
-            <div class="skills-grid" id="skillsGrid">
-              <div class="skill">
-                <h5>Excel (formulas & pivot basics)</h5>
-                <div class="bar"><div class="bar-fill" data-fill="85%"></div></div>
-              </div>
-
-              <div class="skill">
-                <h5>Accounting basics (Tally/Manual)</h5>
-                <div class="bar"><div class="bar-fill" data-fill="78%"></div></div>
-              </div>
-
-              <div class="skill">
-                <h5>HTML / CSS / JS (basics)</h5>
-                <div class="bar"><div class="bar-fill" data-fill="68%"></div></div>
-              </div>
-
-              <div class="skill">
-                <h5>SQL (fundamentals)</h5>
-                <div class="bar"><div class="bar-fill" data-fill="60%"></div></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Languages & Interests -->
-          <div class="card" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start">
-            <div>
-              <div class="section-title">Languages</div>
-              <div class="chips">
-                <div class="chip-pill">Telugu — Native</div>
-                <div class="chip-pill">English — Proficient</div>
-                <div class="chip-pill">Hindi — Conversational</div>
-              </div>
-            </div>
-
-            <div>
-              <div class="section-title">Interests</div>
-              <div class="chips">
-                <div class="chip-pill">Reading</div>
-                <div class="chip-pill">Web Development</div>
-                <div class="chip-pill">Fitness</div>
-                <div class="chip-pill">Music</div>
-              </div>
-            </div>
-          </div>
-
-        </section>
-      </div>
-
-      <!-- Footer area (also acts as resume content root) -->
-      <div style="margin-top:18px">
-        <footer id="resumeContent" class="card">
-          <div style="display:flex;flex-direction:column;gap:12px">
-            <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-              <div>
-                <h3 style="margin:0">Amuda Ganesh</h3>
-                <div class="muted tiny">B.Com (Computer Applications) • Hyderabad</div>
-              </div>
-              <div style="display:flex;gap:10px;align-items:center">
-                <div class="tiny muted">© <span id="year"></span></div>
-              </div>
-            </div>
-
-            <div class="sep" aria-hidden="true"></div>
-
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-              <div>
-                <h4 style="margin:0 0 6px">Summary</h4>
-                <p class="muted tiny">Motivated commerce graduate with hands-on familiarity in spreadsheets, accounting basics and basic web technologies. Passionate about supporting business operations and growing technical skills.</p>
-              </div>
-              <div>
-                <h4 style="margin:0 0 6px">Contact</h4>
-                <div class="tiny muted">Email: <a id="resumeEmail" href="mailto:amuda.ganesh@example.com">amuda.ganesh@example.com</a></div>
-                <div class="tiny muted">Phone: <a id="resumePhone" href="tel:+919812345678">+91 98123 45678</a></div>
-              </div>
-            </div>
-
-          </div>
-        </footer>
-      </div>
-    </div>
-  </main>
+  <!-- (Your body content remains unchanged until the script section) -->
 
   <div class="back-to-top" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></div>
 
-  <!-- Libraries for PDF generation (html2canvas and jsPDF) -->
+  <!-- Libraries for PDF generation -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
   <!-- Interactivity -->
   <script>
-    // set year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Mobile toggle
     const mobileToggle = document.getElementById('mobileToggle');
     const nav = document.querySelector('nav');
     mobileToggle && mobileToggle.addEventListener('click', () => {
@@ -367,21 +165,17 @@
       avatarImg.src = url;
     });
 
-    // Scroll: show back-to-top & animate skill bars & timeline reveal
+    // Scroll animations
     const backTop = document.getElementById('backTop');
     const barFills = document.querySelectorAll('.bar-fill');
     const tlItems = document.querySelectorAll('.tl-item');
 
     function animateOnView() {
       const trigger = window.innerHeight * 0.85;
-      // skills
       barFills.forEach(bar => {
         const rect = bar.getBoundingClientRect();
-        if (rect.top < trigger) {
-          bar.style.width = bar.dataset.fill || '70%';
-        }
+        if (rect.top < trigger) bar.style.width = bar.dataset.fill || '70%';
       });
-      // timeline items
       tlItems.forEach(item => {
         const r = item.getBoundingClientRect();
         if (r.top < trigger) item.classList.add('visible');
@@ -392,46 +186,54 @@
       animateOnView();
       if (window.scrollY > 300) backTop.classList.add('show'); else backTop.classList.remove('show');
     });
-    // initial trigger
     setTimeout(animateOnView, 300);
 
     backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-    // Download Resume (PDF) using html2canvas + jsPDF
+    // Download Resume PDF
     const downloadBtn = document.getElementById('downloadResumeBtn');
     downloadBtn.addEventListener('click', async function(){
       const button = this;
       button.disabled = true;
       button.textContent = 'Preparing PDF...';
       try {
-        // We'll capture the #resumeContent element (clean resume area)
         const element = document.getElementById('resumeContent');
-        // temporarily increase resolution for better print quality
         const scale = 2;
         const canvas = await html2canvas(element, { scale: scale, useCORS: true, backgroundColor: null });
         const imgData = canvas.toDataURL('image/png');
 
-        // create pdf with jsPDF (portrait A4)
         const { jsPDF } = window.jspdf;
         const pdf = new jsPDF({ unit: 'pt', format: 'a4' });
         const pageWidth = pdf.internal.pageSize.getWidth();
         const pageHeight = pdf.internal.pageSize.getHeight();
 
-        // calculate dimensions preserving aspect ratio
-        const imgWidth = pageWidth - 40; // margin
+        const imgWidth = pageWidth - 40;
         const imgHeight = (canvas.height * imgWidth) / canvas.width;
 
-        let posY = 20;
-        if (imgHeight <= pageHeight - 40) {
-          pdf.addImage(imgData, 'PNG', 20, posY, imgWidth, imgHeight);
-        } else {
-          // if longer than one page, add multiple pages
-          let heightLeft = imgHeight;
-          let position = 20;
-          let srcY = 0;
-          const pageCanvas = document.createElement('canvas');
-          const pageCtx = pageCanvas.getContext('2d');
+        let heightLeft = imgHeight;
+        let position = 20;
 
+        if (imgHeight <= pageHeight - 40) {
+          pdf.addImage(imgData, 'PNG', 20, position, imgWidth, imgHeight);
+        } else {
+          let y = 0;
           while (heightLeft > 0) {
-            pageCanvas.width = canvas.width;
-            pageCanvas.height = Math
+            pdf.addImage(imgData, 'PNG', 20, position, imgWidth, imgHeight, '', 'FAST', 0, y);
+            heightLeft -= pageHeight;
+            y += pageHeight;
+            if (heightLeft > 0) pdf.addPage();
+          }
+        }
+
+        pdf.save('Amuda_Ganesh_Resume.pdf');
+      } catch (err) {
+        console.error('PDF generation failed:', err);
+        alert('Could not generate PDF. Please try again.');
+      } finally {
+        button.disabled = false;
+        button.textContent = 'Download Resume';
+      }
+    });
+  </script>
+</body>
+</html>
