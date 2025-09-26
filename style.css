@@ -891,4 +891,86 @@ footer {
         flex-direction: column; /* Stack items vertically on smaller screens */
     }
 }
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    background-color: #f7f9fc;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    flex-direction: column;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center;
+    gap: 20px; /* Adds space between the contact items */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    text-align: center; /* Centers the text inside each contact item */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.contact-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #1f8eed;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    width: 160px; /* Set fixed width for buttons */
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-button:hover {
+    background-color: #1487e0;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.contact-button i {
+    font-size: 28px; /* Slightly smaller icons */
+    margin-bottom: 8px;
+}
+
+.contact-button h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.contact-button p {
+    font-size: 14px;
+    color: #f7f7f7;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .contact-button {
+        width: 140px; /* Smaller buttons on mobile */
+        padding: 12px 15px;
+    }
+
+    .contact-button i {
+        font-size: 24px; /* Smaller icons on mobile */
+    }
+}
+
 
